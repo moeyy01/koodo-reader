@@ -32,7 +32,7 @@ class PopupOption extends React.Component<PopupOptionProps> {
     let doc = getIframeDoc();
     if (!doc) return;
     doc.getSelection()?.empty();
-    toast.success(this.props.t("Copy Successfully"));
+    toast.success(this.props.t("Copying successful"));
   };
   handleTrans = () => {
     if (!isElectron) {
@@ -115,10 +115,14 @@ class PopupOption extends React.Component<PopupOptionProps> {
     noteArr.push(digest);
     window.localforage.setItem("notes", noteArr).then(() => {
       this.props.handleOpenMenu(false);
-      toast.success(this.props.t("Add Successfully"));
+      toast.success(this.props.t("Addition successful"));
       this.props.handleFetchNotes();
       this.props.handleMenuMode("");
-      createOneNote(digest, this.handleNoteClick);
+      createOneNote(
+        digest,
+        this.props.currentBook.format,
+        this.handleNoteClick
+      );
     });
   };
 
