@@ -57,6 +57,7 @@
     "webdav": "^5.7.1"
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "@types/copy-text-to-clipboard": "^2.0.4",
     "@types/file-saver": "^2.0.7",
     "@types/hammerjs": "^2.0.46",
@@ -102,14 +103,14 @@
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "ele": "electron .",
     "dev": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://127.0.0.1:3000/ && nodemon --watch main.js --exec electron .\"",
     "release": "electron-builder",
-    "prerelease": "react-scripts build",
+    "prerelease": "craco build",
     "postinstall": "sed 's/^#include .nan_scriptorigin\\.h./\\/\\/ #include nan_scriptorigin.h/' ./node_modules/nan/nan.h > ./node_modules/nan/nan.h.new && mv ./node_modules/nan/nan.h.new ./node_modules/nan/nan.h && electron-builder install-app-deps",
     "rebuild": "electron-rebuild -f -w better-sqlite3"
   },
