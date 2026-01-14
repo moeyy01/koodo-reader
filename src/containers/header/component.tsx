@@ -58,7 +58,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
       isNewVersion: false,
       width: document.body.clientWidth,
       isDataChange: false,
-      isHidePro: false,
+      isHidePro: true,
       isSync: false,
     };
   }
@@ -636,7 +636,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             </span>
           </div>
 
-          <div
+          {/* <div
             className="setting-icon-container"
             onClick={async () => {
               if (!isElectron && !this.props.isAuthed) {
@@ -672,7 +672,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 }
               ></span>
             </span>
-          </div>
+          </div> */}
         </div>
 
         {!this.props.isAuthed && !this.state.isHidePro ? (

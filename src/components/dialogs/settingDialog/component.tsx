@@ -304,7 +304,7 @@ class SettingDialog extends React.Component<
             >
               <Trans>Sync and backup</Trans>
             </span>
-            <span
+            {/* <span
               className="book-bookmark-title setting-tab"
               style={
                 this.props.settingMode === "account"
@@ -316,7 +316,7 @@ class SettingDialog extends React.Component<
               }}
             >
               <Trans>Account</Trans>
-            </span>
+            </span> */}
           </div>
         </div>
         <div

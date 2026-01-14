@@ -505,14 +505,14 @@ class ImportLocal extends React.Component<ImportLocalProps, ImportLocalState> {
                         ></input>
                       )}
                     </div>
-                    <div
+                    {/* <div
                       className="more-option-item"
                       onClick={this.handleCloudImport}
                     >
                       <span className="more-option-text">
                         <Trans>From cloud storage</Trans>
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                 )}
               </div>
